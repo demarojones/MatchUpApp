@@ -8,8 +8,8 @@ using matchup.api.Data;
 namespace matchup.api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180811013202_initialCreate")]
-    partial class initialCreate
+    [Migration("20180811221711_AddUserModel")]
+    partial class AddUserModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,9 +26,11 @@ namespace matchup.api.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<string>("Password");
+                    b.Property<string>("PasswordHash");
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("PasswordSalt");
+
+                    b.Property<string>("Username");
 
                     b.HasKey("Id");
 

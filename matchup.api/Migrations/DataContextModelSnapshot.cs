@@ -24,9 +24,11 @@ namespace matchup.api.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<string>("Password");
+                    b.Property<string>("PasswordHash");
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("PasswordSalt");
+
+                    b.Property<string>("Username");
 
                     b.HasKey("Id");
 
