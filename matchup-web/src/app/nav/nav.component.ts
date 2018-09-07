@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
       .subscribe(nxt => {
         console.log('logged in success');
       }, err => {
-        console.error('Login Failed');
+        console.error(err);
       });
     console.log(this.model);
   }

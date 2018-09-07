@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using matchup.api.Data;
+using matchup.api.Entities;
 using matchup.api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +44,7 @@ namespace matchup.api.Controllers
 
             var createdUser = await _repo.Register(userToCreate, user.Password);
 
-            return CreatedAtRoute("", createdUser);
+            return StatusCode(201);
         }
 
         [HttpPost("login")]

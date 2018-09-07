@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using matchup.api.Models;
+using matchup.api.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace matchup.api.Data
