@@ -30,7 +30,7 @@ namespace matchup.api.Controllers
 
         // POST api/values
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] UserModel user)
+        public async Task<IActionResult> Register([FromBody] UserRegistrationModel user)
         {
             user.Username = user.Username.ToLower();
             if (await _repo.UserExists(user.Username)) return BadRequest("Username already exixts");
